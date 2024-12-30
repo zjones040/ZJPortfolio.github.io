@@ -1,0 +1,370 @@
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+	Note: Only needed for demo purposes. Delete for production sites.
+-->
+<html>
+	<head>
+		<title>ZJPortfoliopg3</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+<!-- Nav -->
+			<nav id="nav">
+				<ul class="actions stacked">
+					<li><a href="index.html" class="button">Home</a></li>
+					
+				</ul>
+			</nav>
+	</head>
+	<body class="is-preload">
+
+<section class="wrapper style1 align-center" id="reference">
+						<div class="inner">
+							
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
+				<!-- Spotlight -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+						<div class="content">
+							<h2>Traffic Light System</h2>
+							<p>In this project, I created a modified traffic system that allows for a longer yellow phase by increasing the yellow interval time by one second. I also explored the benefits of an extended yellow phase on traffic light systems (based on the Virginia Beach traffic light times), formulated a data comparison chart using Excel, and constructed a presentation to explain my project.
+
+
+							</p>
+							<ul class="actions stacked">
+								<li><a href="https://www.canva.com/design/DAGati0h6Jk/iRz6yA2zHH_SXY98WaMAiQ/view?utm_content=DAGati0h6Jk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6ab9392dd0" class="button">PowerPoint Presentation</a></li>
+							</ul>
+						</div>
+						
+					</section>
+
+<section>
+<div class="content">
+							<h2>Project Images</h2>
+						</div>
+
+<div class="col-4 col-5-large col-12-medium">
+							<span class="image fit"><img src="images/TKC2.jpg" alt="" /></span>
+						</div>
+</section>
+
+<section>
+
+
+<div class="col-4 col-5-medium col-12-medium">
+							<span class="image fit"><img src="images/PG7.jpg" alt="" /></span>
+						</div>
+</section>
+<section>
+
+<div class="col-4 col-5-large col-12-medium">
+							<span class="image fit"><img src="images/PG8.jpg" alt="" /></span>
+						</div>
+						
+</section>
+
+
+<section>
+
+<div class="col-4 col-5-large col-12-medium">
+							<span class="image fit"><img src="images/PG9.jpg" alt="" /></span>
+						</div>
+						
+</section>
+
+
+
+
+
+	<!-- Modifiers -->
+<section class="wrapper style1 align-center" id="reference">
+						<div class="inner">
+							<h2>Project Code</h2>
+							
+							<div class="index align-left">
+
+								<!-- Banner -->
+									<section id="reference-banner">
+
+										<div class="content">
+
+											
+<pre><code>
+// C++ code 
+// 
+//Variables 
+int NSGreen = 2; //Attaches north/south green variable to pin two 
+int NSYellow = 4; //Attaches north/south yellow variable to pin four 
+int NSRed = 6; //Attaches north/south red variable to pin six 
+int EWGreen = 3; //Attaches east/west green variable to pin three 
+int EWYellow = 5; //Attaches east/west yellow variable to pin five 
+int EWRed = 7; //Attaches east/west red variable to pin seven 
+void setup() { 
+ pinMode ( NSGreen, OUTPUT ); //Sets pin mode for north/south green 
+ pinMode ( NSYellow, OUTPUT ); //Sets pin mode for north/south yellow 
+ pinMode ( NSRed, OUTPUT ); //Sets pin mode for north/south red 
+
+pinMode ( EWGreen, OUTPUT ); //Sets pin mode for east/west green 
+ pinMode ( EWYellow, OUTPUT ); //Sets pin mode for east/west yellow 
+ pinMode ( EWRed, OUTPUT ); //Sets pin mode for east/west red 
+ //For this circuit setting a pin high turns the LED OFF, and low turns the LED ON 
+ digitalWrite ( NSGreen, HIGH ); //Sets default state for north/south green on first pass 
+ digitalWrite ( NSYellow, HIGH ); //Sets default state for north/south yellow on first pass 
+ digitalWrite ( EWGreen, HIGH ); //Sets default state for east/west green on first pass 
+ digitalWrite ( EWYellow, HIGH ); //Sets default state for east/west yellow on first pass 
+} 
+void loop() { 
+ 
+ digitalWrite ( NSRed, LOW ); //Turn on north/south red 
+ digitalWrite ( EWRed, LOW ); //Turn on east/west red 
+ delay ( 1020 ); //Wait 1.02 seconds or 1020 milli seconds 
+ digitalWrite ( NSRed, HIGH ); //Turn off north/south red 
+ digitalWrite ( NSGreen, LOW ); //Turn on north/south green 
+ delay ( 3000 ); //Wait 3 seconds or 3000 milli seconds 
+ digitalWrite ( NSGreen, HIGH ); //Turn off north/south green 
+ digitalWrite ( NSYellow, LOW ); //Turn on north/south yellow 
+ delay ( 4720 ); //Wait 4.72 seconds or 4720 milli seconds 
+ digitalWrite ( NSYellow, HIGH); //Turn off north/south yellow 
+ digitalWrite ( NSRed, LOW ); //Turn on north/south red 
+ delay ( 1020 ); //Wait 1.02 seconds or 1020 milli seconds 
+ digitalWrite ( EWRed, HIGH ); //Turn off east/west red 
+ digitalWrite ( EWGreen, LOW ); //Turn on east/west green 
+ delay ( 3000 ); //Wait 3 seconds or 3000 milli seconds 
+ digitalWrite ( EWGreen, HIGH ); //Turn off east/west green 
+ digitalWrite ( EWYellow, LOW); //Turn on east/west yellow 
+ delay ( 4720 ); //Wait 4.72 seconds or 4720 milli seconds 
+
+digitalWrite ( EWYellow, HIGH); //turn off east/west yellow for next pass 
+} 	
+
+</code></pre>
+</section>
+											
+</section>
+				<!-- Spotlight -->
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Arduino Project #1</h2>
+							<p>In this project, created a circuit using an Arduino kit that uses a DC motor to power a fan and tested it. The motor rotates clockwise and counterclockwise 5 times. next, it spins clockwise, pauses, then spins counterclockwise. The fan pauses again for 10s until the next cycle starts.
+							</p>
+						</div>
+						
+					</section>
+			
+<section>
+<div class="content">
+							<h2>Images</h2>
+						</div>
+
+<div class="col-4 col-5-large col-12-medium">
+							<span class="image fit"><img src="images/PG4.jpg" alt="" /></span>
+						</div>
+</section>
+
+<section>
+
+
+<div class="col-4 col-5-medium col-12-medium">
+							<span class="image fit"><img src="images/PG5.jpg" alt="" /></span>
+						</div>
+</section>
+<section>
+
+<div class="col-4 col-5-large col-12-medium">
+							<span class="image fit"><img src="images/PG6.jpg" alt="" /></span>
+						</div>
+						
+</section>
+
+		<!-- Spotlight -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+						<div class="content">
+							<h2>Arduino Project #2</h2>
+							<p>
+In this project, I wrote a code using Arduino software that allows the user convert temperatures from Celsius to Fahrenheit and tested it using an Arduino kit. 
+
+If the converted temperature in Fahrenheit is greater than 90 degrees, then the red LED on the board lights up and the LCD displays the message: “The temp is hot”.
+
+If the temperature after the convertion is less than 32 degrees, then the white LED lights up and the LCD displays the message “The temp is cold”.
+
+If the temperature in Fahrenheit is between 32 and 90 degrees, then the green LED lights up and the LCD displays the message: “The temp is great”.
+</p>
+
+
+							</p>
+							
+						</div>
+						
+					</section>
+<section>
+<div class="content">
+							<h2>Project Images</h2>
+						</div>
+
+<div class="col-4 col-5-large col-12-medium">
+							<span class="image fit"><img src="images/PG1.jpg" alt="" /></span>
+						</div>
+</section>
+
+<section>
+
+
+<div class="col-4 col-5-medium col-12-medium">
+							<span class="image fit"><img src="images/PG2.jpg" alt="" /></span>
+						</div>
+</section>
+<section>
+
+<div class="col-4 col-5-large col-12-medium">
+							<span class="image fit"><img src="images/PG3.jpg" alt="" /></span>
+						</div>
+						
+</section>
+
+	<!-- Modifiers -->
+	<section class="wrapper style1 align-center" id="reference">
+						<div class="inner">
+							<h2>Project Code</h2>
+							
+							<div class="index align-left">
+
+								<!-- Banner -->
+									<section id="reference-banner">
+
+										<div class="content">
+
+											
+<pre><code>#include &lt;LiquidCrystal.h&gt;
+
+
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+ 
+
+int pos = 0;
+
+const int ledpin1 = 9;    // LED output pin
+const int ledpin2 = 13;
+const int ledpin3 = 7;
+int Contrast = 60;
+
+void setup(){
+
+Serial.begin(9600);
+analogWrite(10, Contrast);
+lcd.begin(16, 2);
+
+pinMode(ENABLE, OUTPUT);
+
+pinMode(ledpin1, OUTPUT);
+pinMode(ledpin2, OUTPUT);
+pinMode(ledpin3, OUTPUT);
+}
+
+ 
+
+void loop(){
+
+lcd.clear();
+
+int temp = analogRead(A0);
+
+
+
+int tempF = map(temp, 0, 1023, 0, 180);  //assuming the input is in F
+
+
+ //text on first line of LCD
+
+lcd.setCursor(0, 1);
+
+lcd.print("Temp        F"); //text on second line of LCD
+
+lcd.setCursor(6, 1);
+
+lcd.print(tempF); //desply the temp on LCD
+
+
+if(tempF < 32){  //if temp is below 80F
+
+digitalWrite(ledpin2, HIGH);  //led is ON
+
+digitalWrite(ledpin3, LOW);
+
+digitalWrite(ledpin1, LOW);
+
+lcd.setCursor(0, 0);
+
+lcd.print("Temp is Cold");
+delay(200);
+
+}else if(tempF > 90){  //if temp is above 90F
+
+digitalWrite(ledpin1, HIGH);  //led is on
+
+digitalWrite(ledpin2, LOW);
+
+digitalWrite(ledpin3, LOW);
+
+
+lcd.setCursor(0, 0);
+
+lcd.print("Temp is Hot");
+delay(200);
+
+}else{
+
+lcd.setCursor(0, 0);
+lcd.print("Temp is great");
+digitalWrite(ledpin3, HIGH);
+
+digitalWrite(ledpin2, LOW);
+
+digitalWrite(ledpin1, LOW);  //led is off
+
+delay(200);  //wait 0.1 second
+
+}
+
+}</code></pre>
+
+											
+</section>
+
+					<footer id= "contact" class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>My Socials and Email</h2>
+							<ul class="icons">
+								<li><a href="https://www.facebook.com/people/Zandria-Jones/pfbid05fEZNEJVdnu8yyrbzr8nRXHrDhww1orQF6CAnKNdNSDTNMANvSsMEDaU8hDw37eAl/" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.linkedin.com/in/zandria-jones-53a393301/" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="mailto:zjones040@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+							<p>&copy; 2024. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						</div>
+					
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+		<!-- Note: Only needed for demo purposes. Delete for production sites. -->
+			<script src="assets/js/demo.js"></script>
+
+	</body>
+</html>
